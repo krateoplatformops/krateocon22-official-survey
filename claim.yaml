@@ -1,0 +1,208 @@
+apiVersion: templates.krateo.io/v1alpha1
+kind: TypeForm
+metadata:
+  labels:
+    deploymentId: 62cde6987b7b80a463f1c137
+  name: krateocon22-official-survey-typeform
+spec:
+  _values: '{"title":"krateocon22-official-survey","surveyImage":"https://images.typeform.com/images/p9ctZzmsu44E","namespace":"krateocon","welcomeScreenTitle":"Benvenuto
+    al questionario su KrateoCon22!","welcomeButtonText":"Start","thankyouScreenTitle":"Grazie
+    per i feedback!","emailTitle":"Inserisci il tuo indirizzo email","emailDescription":"Ti
+    contatteremo solo se sarai interessato","ratingEventTitle":"In generale, che valutazione
+    complessiva dai all''evento?","ratingEventShape":"heart","ratingExposureTitle":"Come
+    giudichi il livello di esposizione degli speaker?","ratingExposureShape":"lightbulb","ratingCompletenessTitle":"Indica
+    il livello di completezza degli argomenti trattati","ratingCompletenessShape":"star","ratingDurationTitle":"Hai
+    apprezzato la durata dell''evento?","ratingDurationShape":"circle","ratingVoteTitle":"Che
+    voto daresti alla soluzione Krateo PlatformOps?","ratingVoteShape":"trophy","featureTitle":"Quali
+    sono le feature di Krateo PlatformOps che ti sono piaciute di piu/che pensi possano
+    essere piu utili?","functionalityTitle":"Ci sono delle funzionalita che aggiungeresti?","maxLength":"300","titleInteresting":"Quali
+    sono gli aspetti che si sono dimostrati piu interessanti durante l''evento?","titleContacts":"Vorresti
+    essere ricontattato da noi per un colloquio approfondito e personalizzato per
+    approfondire Krateo?","choice1":"Si, entro i prossimi 3 mesi","choice2":"Si, entro
+    i prossimi 6 mesi","choice3":"Si, entro i prossimi 12 mesi","choice4":"No, non
+    mi interessa","provider":"github.com","organizationName":"krateoplatformops","repositoryName":"krateocon22-official-survey","owner":"guest","domain":"github.com","schema":"https","apiUrl":"https://api.github.com","deploymentId":"62cde6987b7b80a463f1c137"}'
+  dashboard:
+    description: Typeform survey
+    icon: fa-solid fa-fire
+    links:
+    - icon: fa-brands fa-git
+      title: krateoplatformops/krateocon22-official-survey
+      url: https://github.com/krateoplatformops/krateocon22-official-survey
+    owner: guest
+    plugins:
+    - endpointName: github.com
+      icon: fa-solid fa-book
+      name: documentation
+      type: doc
+      values:
+      - README.md
+    - icon: fa-brands fa-docker
+      name: kubernetes
+      type: kubernetes
+      value: deploymentId=62cde6987b7b80a463f1c137
+    tags:
+    - typeform
+    - survey
+    - krateo
+  form:
+    fields:
+    - properties:
+        description: Ti contatteremo solo se sarai interessato
+      title: Inserisci il tuo indirizzo email
+      type: email
+      validations:
+        required: true
+    - layout:
+        attachment:
+          href: https://images.typeform.com/images/p9ctZzmsu44E
+          type: image
+        type: split
+      properties:
+        shape: heart
+        steps: 5
+      title: In generale, che valutazione complessiva dai all'evento?
+      type: rating
+      validations:
+        required: true
+    - layout:
+        attachment:
+          href: https://images.typeform.com/images/p9ctZzmsu44E
+          type: image
+        type: split
+      properties:
+        shape: lightbulb
+        steps: 5
+      title: Come giudichi il livello di esposizione degli speaker?
+      type: rating
+      validations:
+        required: true
+    - layout:
+        attachment:
+          href: https://images.typeform.com/images/p9ctZzmsu44E
+          type: image
+        type: split
+      properties:
+        shape: star
+        steps: 5
+      title: Indica il livello di completezza degli argomenti trattati
+      type: rating
+      validations:
+        required: true
+    - layout:
+        attachment:
+          href: https://images.typeform.com/images/p9ctZzmsu44E
+          type: image
+        type: split
+      properties:
+        shape: circle
+        steps: 5
+      title: Hai apprezzato la durata dell'evento?
+      type: rating
+      validations:
+        required: true
+    - layout:
+        attachment:
+          href: https://images.typeform.com/images/p9ctZzmsu44E
+          type: image
+        type: split
+      properties:
+        shape: trophy
+        steps: 5
+      title: Che voto daresti alla soluzione Krateo PlatformOps?
+      type: rating
+      validations:
+        required: true
+    - layout:
+        attachment:
+          href: https://images.typeform.com/images/p9ctZzmsu44E
+          type: image
+        type: split
+      title: Quali sono le feature di Krateo PlatformOps che ti sono piaciute di piu/che
+        pensi possano essere piu utili?
+      type: long_text
+      validations:
+        maxLength: 300
+    - layout:
+        attachment:
+          href: https://images.typeform.com/images/p9ctZzmsu44E
+          type: image
+        type: split
+      title: Ci sono delle funzionalita che aggiungeresti?
+      type: long_text
+      validations:
+        maxLength: 300
+    - layout:
+        attachment:
+          href: https://images.typeform.com/images/p9ctZzmsu44E
+          type: image
+        type: split
+      properties:
+        allowOtherChoice: true
+        choices:
+        - Il keynote su Krateo PlatformOps
+        - 'Il talk Platform Teams: Key to Success at Scale'
+        - 'Il talk DevOps: Bridging the Gap Between Modern and Legacy Architectures'
+        - How to Build Your Platform Team
+        - La sessione di live coding sui Crossplane Provider
+        - La sessione di live coding sulle CrossplaneComposition
+        - La sessione di live coding sui Krateo Template
+        description: (possibilita di scelta multipla)
+      title: Quali sono gli aspetti che si sono dimostrati piu interessanti durante
+        l'evento?
+      type: multiple_choice
+      validations:
+        required: true
+    - layout:
+        attachment:
+          href: https://images.typeform.com/images/p9ctZzmsu44E
+          type: image
+        type: split
+      properties:
+        allowOtherChoice: false
+        choices:
+        - Si, entro i prossimi 3 mesi
+        - Si, entro i prossimi 6 mesi
+        - Si, entro i prossimi 12 mesi
+        - No, non mi interessa
+        description: (possibilita di scelta multipla)
+      title: Vorresti essere ricontattato da noi per un colloquio approfondito e personalizzato
+        per approfondire Krateo?
+      type: multiple_choice
+      validations:
+        required: true
+    thankyouScreens:
+    - layout:
+        attachment:
+          href: https://images.typeform.com/images/p9ctZzmsu44E
+          type: image
+        type: split
+      properties:
+        shareIcons: true
+        showButton: false
+      title: Grazie per i feedback!
+    title: krateocon22-official-survey
+    welcomeScreens:
+    - layout:
+        attachment:
+          href: https://images.typeform.com/images/p9ctZzmsu44E
+          type: image
+        type: split
+      properties:
+        buttonText: Start
+        showButton: true
+      title: Benvenuto al questionario su KrateoCon22!
+  fromRepo:
+    apiUrl: https://api.github.com/
+    domain: github.com
+    organizationName: krateoplatformops
+    provider: github
+    repositoryName: typeform-template
+    schema: https
+  namespace: krateocon
+  toRepo:
+    apiUrl: https://api.github.com
+    domain: github.com
+    organizationName: krateoplatformops
+    provider: github.com
+    repositoryName: krateocon22-official-survey
+    schema: https
